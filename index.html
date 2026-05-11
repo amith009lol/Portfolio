@@ -4204,6 +4204,39 @@ html{
   height:100%;
   border:none;
 }
+    .short-video-wrap{
+  position:relative;
+  width:100%;
+  height:520px;
+  overflow:hidden;
+  border-radius:28px;
+}
+
+.short-video-wrap video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.short-play{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(12px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:38px;
+  color:white;
+  cursor:pointer;
+  z-index:10;
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -4651,25 +4684,27 @@ window.addEventListener('mousemove', (e)=>{
 
 <div class="short-card">
 
- <div class="short-video-wrap">
+  <div class="short-video-wrap">
 
-  <video
-    controls
-    playsinline
-    preload="metadata"
-    poster="Portfolioshortthumb1.png">
+    <video
+      id="short1"
+      playsinline
+      preload="metadata"
+      poster="Portfolioshortthumb1.png">
 
-    <source 
-      src="https://player.vimeo.com/progressive_redirect/playback/1190912604/rendition/720p/file.mp4"
-      type="video/mp4">
+      <source 
+        src="https://player.vimeo.com/progressive_redirect/playback/1190912604/rendition/720p/file.mp4"
+        type="video/mp4">
 
-  </video>
+    </video>
+
+    <div class="short-play" onclick="playVideo('short1', this)">
+      ▶
+    </div>
+
+  </div>
 
 </div>
-</div>
-
-</div>
-
     <div class="short-bottom">
 
       <div class="short-stats">
@@ -4701,17 +4736,23 @@ window.addEventListener('mousemove', (e)=>{
 
   <div class="short-video-wrap">
 
-  <video
-    controls
-    playsinline
-    preload="metadata"
-    poster="Portfolioshortthumb2.png">
+    <video
+      id="short2"
+      playsinline
+      preload="metadata"
+      poster="Portfolioshortthumb2.png">
 
-    <source 
-      src="https://player.vimeo.com/progressive_redirect/playback/1190910769/rendition/720p/file.mp4"
-      type="video/mp4">
+      <source 
+        src="https://player.vimeo.com/progressive_redirect/playback/1190910769/rendition/720p/file.mp4"
+        type="video/mp4">
 
-  </video>
+    </video>
+
+    <div class="short-play" onclick="playVideo('short2', this)">
+      ▶
+    </div>
+
+  </div>
 
 </div>
     <div class="short-bottom">
@@ -4744,19 +4785,25 @@ window.addEventListener('mousemove', (e)=>{
 
 <div class="short-card">
 
- <div class="short-video-wrap">
+  <div class="short-video-wrap">
 
-  <video
-    controls
-    playsinline
-    preload="metadata"
-    poster="Portfolioshortthumb3.png">
+    <video
+      id="short3"
+      playsinline
+      preload="metadata"
+      poster="Portfolioshortthumb3.png">
 
-    <source 
-      src="https://player.vimeo.com/progressive_redirect/playback/1190910790/rendition/720p/file.mp4"
-      type="video/mp4">
+      <source 
+        src="https://player.vimeo.com/progressive_redirect/playback/1190910790/rendition/720p/file.mp4"
+        type="video/mp4">
 
-  </video>
+    </video>
+
+    <div class="short-play" onclick="playVideo('short3', this)">
+      ▶
+    </div>
+
+  </div>
 
 </div>
 
@@ -5721,3 +5768,17 @@ transform:translateY(-8px) !important;
   </div>
 
 </section>
+<script>
+function playVideo(id, button){
+
+  const video = document.getElementById(id);
+
+  if(video.paused){
+    video.play();
+    button.style.display = "none";
+  }
+
+}
+</script>
+
+</html>
