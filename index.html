@@ -4189,7 +4189,13 @@ html{
   overflow:hidden;
   border-radius:28px;
 }
-
+.short-video-wrap video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:28px;
+  display:block;
+}
 .vimeo-wrap iframe{
   position:absolute;
   top:0;
@@ -4645,17 +4651,21 @@ window.addEventListener('mousemove', (e)=>{
 
 <div class="short-card">
 
-  <div class="short-video-wrap">
+ <div class="short-video-wrap">
 
-<div class="short-video-wrap vimeo-wrap">
+  <video
+    controls
+    playsinline
+    preload="metadata"
+    poster="Portfolioshortthumb1.png">
 
-  <iframe 
-    src="https://player.vimeo.com/video/1190912604?badge=0&autopause=0&player_id=0&app_id=58479"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+    <source 
+      src="https://player.vimeo.com/progressive_redirect/playback/1190912604/rendition/720p/file.mp4"
+      type="video/mp4">
 
+  </video>
+
+</div>
 </div>
 
 </div>
@@ -4691,14 +4701,17 @@ window.addEventListener('mousemove', (e)=>{
 
   <div class="short-video-wrap">
 
-  <div class="short-video-wrap vimeo-wrap">
+  <video
+    controls
+    playsinline
+    preload="metadata"
+    poster="Portfolioshortthumb2.png">
 
-  <iframe 
-    src="https://player.vimeo.com/video/1190910790?badge=0&autopause=0&player_id=0&app_id=58479"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+    <source 
+      src="https://player.vimeo.com/progressive_redirect/playback/1190910769/rendition/720p/file.mp4"
+      type="video/mp4">
+
+  </video>
 
 </div>
     <div class="short-bottom">
@@ -4731,14 +4744,19 @@ window.addEventListener('mousemove', (e)=>{
 
 <div class="short-card">
 
- <div class="short-video-wrap vimeo-wrap">
+ <div class="short-video-wrap">
 
-  <iframe 
-    src="https://player.vimeo.com/video/1190910790?badge=0&autopause=0&player_id=0&app_id=58479"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+  <video
+    controls
+    playsinline
+    preload="metadata"
+    poster="Portfolioshortthumb3.png">
+
+    <source 
+      src="https://player.vimeo.com/progressive_redirect/playback/1190910790/rendition/720p/file.mp4"
+      type="video/mp4">
+
+  </video>
 
 </div>
 
