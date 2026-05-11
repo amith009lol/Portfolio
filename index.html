@@ -1024,98 +1024,25 @@ section::before{
 }
 
 .video-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
 
-  background:rgba(255,255,255,0.5);
+  padding:30px;
+  margin-top:50px;
 
-  border:1px solid rgba(255,255,255,0.45);
+  border-radius:36px;
 
-  backdrop-filter:blur(16px);
+  background:rgba(255,255,255,0.45);
 
-  border-radius:34px;
+  border:1px solid rgba(255,255,255,0.5);
 
-  overflow:hidden;
-
-  box-shadow:0 15px 40px rgba(0,0,0,0.05);
-
-  transition:0.4s;
+  backdrop-filter:blur(18px);
 }
-
 .video-card:hover{
   transform:translateY(-8px);
 }
-
-.video-thumbnail{
-
-  position:relative;
-
-  height:300px;
-
-  overflow:hidden;
-
-}
-.video-thumbnail video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.video-thumbnail img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.play-button{
-z-index:10;
-  position:absolute;
-
-  top:50%;
-  left:50%;
-
-  transform:translate(-50%,-50%);
-
-  width:110px;
-  height:110px;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,0.18);
-
-  backdrop-filter:blur(12px);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  color:#6366f1;
-
-  font-size:42px;
-
-  border:1px solid rgba(255,255,255,0.3);
-
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.video-badge{
-  position:absolute;
-
-  top:20px;
-  right:20px;
-
-  padding:12px 18px;
-
-  border-radius:40px;
-
-  background:rgba(255,255,255,0.22);
-
-  backdrop-filter:blur(12px);
-
-  color:white;
-
-  font-weight:600;
-
-  border:1px solid rgba(255,255,255,0.3);
-}
-
 .video-content{
 
   padding:22px 24px;
@@ -1173,7 +1100,27 @@ z-index:10;
   filter:blur(120px);
   z-index:-1;
 }
+.video-info{
+  width:45%;
+}
+.video-wrap{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border-radius:32px;
+  background:#000;
+}
 
+.video-wrap iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  display:block;
+}
+.video-preview{
+  width:55%;
+}
 .glow-left{
   width:320px;
   height:320px;
@@ -1502,157 +1449,7 @@ body::before{
 
 }
 
-.shorts-grid{
 
-  width:100%;
-
-  max-width:1180px;
-
-  margin:auto;
-
-}.shortform-top{
-
-  max-width:1180px;
-
-  margin:0 auto 60px auto;
-
-}
-
-.shorts-grid{
-
-  width:100%;
-
-  max-width:1180px;
-
-  margin:auto;
-
-}
-
-.shortform-top h2{
-
-  font-size:72px;
-
-  line-height:1;
-
-  margin-bottom:24px;
-
-  font-family:'Cormorant Garamond',serif;
-
-}
-
-.shortform-top h2 span{
-
-  background:
-  linear-gradient(
-  90deg,
-  #3b82f6,
-  #8b5cf6
-  );
-
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-}
-
-.shortform-top p{
-
-  max-width:760px;
-
-  font-size:18px;
-
-  line-height:1.8;
-
-  color:#6b7280;
-
-}
-
-.shorts-grid{
-
-  display:grid;
-
-  grid-template-columns:
-  repeat(3,1fr);
-
-  gap:28px;
-
-}
-
-.short-card{
-
-  overflow:hidden;
-
-  border-radius:36px;
-
-  background:
-  linear-gradient(
-  180deg,
-  rgba(255,255,255,0.7),
-  rgba(255,255,255,0.4)
-  );
-
-  border:1px solid rgba(255,255,255,0.5);
-
-  backdrop-filter:blur(20px);
-
-  box-shadow:
-  0 20px 60px rgba(59,130,246,0.08);
-
-  transition:0.45s ease;
-
-}
-
-.short-card:hover{
-
-  transform:
-  translateY(-12px)
-  scale(1.02);
-
-}
-
-.short-video-wrap{
-
-  height:520px;
-
-}
-
-.short-video-wrap video{
-  cursor:pointer;
-
-  width:100%;
-
-  height:100%;
-
-  object-fit:cover;
-
-}
-.short-bottom{
-
-  position:absolute;
-
-  left:0;
-  bottom:0;
-
-  width:100%;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  padding:18px 20px;
-
-  background:
-  linear-gradient(
-  to top,
-  rgba(0,0,0,0.75),
-  transparent
-  );
-
-  z-index:5;
-
-}
 
 .short-stats{
 
@@ -1679,25 +1476,16 @@ body::before{
 }
 
 .short-duration{
-
   padding:10px 16px;
-
   border-radius:40px;
-
-  background:
-  rgba(255,255,255,0.18);
-
+  background:rgba(255,255,255,0.18);
   backdrop-filter:blur(10px);
-
   color:white;
-
   font-size:14px;
-
   font-weight:600;
+  border:1px solid rgba(255,255,255,0.25);
+}
 
-  border:
-  1px solid rgba(255,255,255,0.25);
-  
 .short-video-wrap iframe{
   width:100%;
   height:100%;
@@ -1707,45 +1495,6 @@ body::before{
   pointer-events:auto;
 }
   
-}
-.short-play{
-
-  position:absolute;
-
-  top:50%;
-
-  left:50%;
-
-  transform:translate(-50%,-50%);
-
-  width:95px;
-
-  height:95px;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:
-  rgba(255,255,255,0.16);
-
-  backdrop-filter:blur(12px);
-
-  border:1px solid rgba(255,255,255,0.3);
-
-  color:#6366f1;
-
-  font-size:38px;
-
-  cursor:pointer;
-
-  z-index:10;
-
-}
 
 .short-content{
 
@@ -1808,7 +1557,96 @@ body::before{
   opacity:0.16;
 
 }
+.shorts-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
 
+.short-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:36px;
+  background:rgba(255,255,255,0.45);
+  border:1px solid rgba(255,255,255,0.5);
+  backdrop-filter:blur(18px);
+  box-shadow:0 20px 60px rgba(59,130,246,0.08);
+  transition:0.4s ease;
+}
+
+.short-card:hover{
+  transform:translateY(-10px);
+}
+
+.short-video-wrap{
+  position:relative;
+  width:100%;
+  height:520px;
+  overflow:hidden;
+  border-radius:36px;
+}
+
+.short-video-wrap iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  display:block;
+}
+
+.short-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.35),
+    transparent 35%
+  );
+  pointer-events:none;
+  z-index:2;
+}
+
+
+.short-bottom{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:4;
+}
+
+.short-stats{
+  display:flex;
+  gap:18px;
+}
+
+.short-stats span{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:white;
+  font-size:14px;
+  font-weight:500;
+}
+
+.short-duration{
+  padding:10px 16px;
+  border-radius:40px;
+  background:rgba(255,255,255,0.16);
+  backdrop-filter:blur(10px);
+  color:white;
+  font-size:14px;
+  font-weight:600;
+}
+
+@media(max-width:1200px){
+  .shorts-grid{
+    grid-template-columns:1fr;
+  }
+}
 .floating-short{
 
   position:absolute;
@@ -4219,24 +4057,81 @@ html{
   display:block;
 }
 
-.short-play{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.15);
-  backdrop-filter:blur(12px);
+.long-video-wrap{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border-radius:32px;
+  background:#000;
+}
+
+.long-video-wrap iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  display:block;
+}
+
+.video-card{
   display:flex;
   align-items:center;
-  justify-content:center;
-  font-size:38px;
-  color:white;
-  cursor:pointer;
-  z-index:10;
+  justify-content:space-between;
+  gap:60px;
+
+  max-width:1200px;
+  margin:50px auto;
+
+  padding:30px;
+
+  border-radius:36px;
+
+  background:rgba(255,255,255,0.45);
+
+  border:1px solid rgba(255,255,255,0.5);
+
+  backdrop-filter:blur(18px);
+
+  box-shadow:0 20px 60px rgba(59,130,246,0.08);
 }
+
+.video-preview{
+  width:55%;
+}
+
+.video-info{
+  width:45%;
+}
+
+.long-video-wrap{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border-radius:28px;
+  background:#000;
+}
+
+.long-video-wrap iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  display:block;
+}
+
+@media(max-width:900px){
+
+  .video-card{
+    flex-direction:column;
+  }
+
+  .video-preview,
+  .video-info{
+    width:100%;
+  }
+
+}
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -4441,69 +4336,63 @@ html{
 
   </div>
 
-  <div class="video-grid">
+<div class="video-card">
 
-    <div class="video-card">
+  <div class="video-preview">
 
-      <div class="video-thumbnail">
+    <div class="long-video-wrap">
 
-        <video id="video1" controls controlsList="nodownload" poster="thumbnail1.jpg">
-  <source src="videos/video1.mp4" type="video/mp4">
-</video>
-
-        <div class="play-button" onclick="playVideo('video1', this)">
-  ▶
-</div>
-
-        <div class="video-badge">
-          2.1M Views
-        </div>
-
-      </div>
-
-      <div class="video-content">
-
-        <h3>Documentary Style Edit</h3>
-
-        <p>
-          Cinematic storytelling with immersive pacing and clean transitions.
-        </p>
-
-      </div>
-
-    </div>
-
-    <div class="video-card">
-
-      <div class="video-thumbnail">
-
-        <video id="video2" controls controlsList="nodownload" poster="thumbnail2.jpg">
-  <source src="videos/video2.mp4" type="video/mp4">
-</video>
-
-        <div class="play-button" onclick="playVideo('video2', this)">
-  ▶
-</div>
-
-        <div class="video-badge">
-          1.8M Views
-        </div>
-
-      </div>
-
-      <div class="video-content">
-
-        <h3>Gaming Long-form</h3>
-
-        <p>
-          Fast-paced entertaining edits optimized for viewer retention.
-        </p>
-
-      </div>
+      <iframe
+        src="https://player.vimeo.com/video/1190910718?title=0&byline=0&portrait=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
 
     </div>
 
   </div>
+
+  <div class="video-info">
+
+    <h3>Documentary Style Edit</h3>
+
+    <p>
+      Cinematic storytelling with immersive pacing and clean transitions.
+    </p>
+
+  </div>
+
+</div>
+
+   <div class="video-card">
+
+  <div class="video-preview">
+
+    <div class="long-video-wrap">
+
+      <iframe
+        src="https://player.vimeo.com/video/1190910941?title=0&byline=0&portrait=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+  </div>
+
+  <div class="video-info">
+
+    <h3>Gaming Long-form</h3>
+
+    <p>
+      High-retention gaming edit with cinematic motion and sound design.
+    </p>
+
+  </div>
+
+</div>
 
 </section>
 <script>
@@ -4643,6 +4532,7 @@ window.addEventListener('mousemove', (e)=>{
 </script>
 <!-- SHORT FORM SHOWCASE SECTION START -->
 
+
 <section class="shortform-section">
 
   <div class="sf-blur sfb1"></div>
@@ -4680,164 +4570,133 @@ window.addEventListener('mousemove', (e)=>{
 
   <div class="shorts-grid">
 
-    <!-- CARD 1 -->
+    <!-- SHORT 1 -->
+    <div class="short-card">
 
-<div class="short-card">
+      <div class="short-video-wrap">
 
-  <div class="short-video-wrap">
+        <iframe
+          src="https://player.vimeo.com/video/1190912604?title=0&byline=0&portrait=0"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
 
-    <video
-      id="short1"
-      playsinline
-      preload="metadata"
-      poster="Portfolioshortthumb1.png">
+        <div class="short-overlay"></div>
 
-      <source 
-        src="https://player.vimeo.com/progressive_redirect/playback/1190912604/rendition/720p/file.mp4"
-        type="video/mp4">
 
-    </video>
+        <div class="short-bottom">
 
-    <div class="short-play" onclick="playVideo('short1', this)">
-      ▶
-    </div>
+          <div class="short-stats">
 
-  </div>
+            <span>
+              <i class="fa-solid fa-eye"></i>
+              800k Views
+            </span>
 
-</div>
-    <div class="short-bottom">
+            <span>
+              <i class="fa-solid fa-heart"></i>
+              86K Likes
+            </span>
 
-      <div class="short-stats">
+          </div>
 
-        <span>
-          <i class="fa-solid fa-eye"></i>
-          1.2M Views
-        </span>
+          <div class="short-duration">
+            0:24
+          </div>
 
-        <span>
-          <i class="fa-solid fa-heart"></i>
-          86K Likes
-        </span>
+        </div>
 
-      </div>
-
-      <div class="short-duration">
-        0:24
       </div>
 
     </div>
 
-  </div>
+    <!-- SHORT 2 -->
+    <div class="short-card">
 
-</div>
-    <!-- CARD 2 -->
+      <div class="short-video-wrap">
 
-<div class="short-card">
+        <iframe
+          src="https://player.vimeo.com/video/1190910769?title=0&byline=0&portrait=0"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
 
-  <div class="short-video-wrap">
+        <div class="short-overlay"></div>
 
-    <video
-      id="short2"
-      playsinline
-      preload="metadata"
-      poster="Portfolioshortthumb2.png">
 
-      <source 
-        src="https://player.vimeo.com/progressive_redirect/playback/1190910769/rendition/720p/file.mp4"
-        type="video/mp4">
+        <div class="short-bottom">
 
-    </video>
+          <div class="short-stats">
 
-    <div class="short-play" onclick="playVideo('short2', this)">
-      ▶
-    </div>
+            <span>
+              <i class="fa-solid fa-eye"></i>
+              121K Views
+            </span>
 
-  </div>
+            <span>
+              <i class="fa-solid fa-heart"></i>
+              72K Likes
+            </span>
 
-</div>
-    <div class="short-bottom">
+          </div>
 
-      <div class="short-stats">
+          <div class="short-duration">
+            0:19
+          </div>
 
-        <span>
-          <i class="fa-solid fa-eye"></i>
-          934K Views
-        </span>
+        </div>
 
-        <span>
-          <i class="fa-solid fa-heart"></i>
-          72K Likes
-        </span>
-
-      </div>
-
-      <div class="short-duration">
-        0:19
       </div>
 
     </div>
 
-  </div>
+    <!-- SHORT 3 -->
+    <div class="short-card">
 
-</div>
+      <div class="short-video-wrap">
 
-   <!-- CARD 3 -->
+        <iframe
+          src="https://player.vimeo.com/video/1190910790?title=0&byline=0&portrait=0"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
 
-<div class="short-card">
+        <div class="short-overlay"></div>
 
-  <div class="short-video-wrap">
 
-    <video
-      id="short3"
-      playsinline
-      preload="metadata"
-      poster="Portfolioshortthumb3.png">
+        <div class="short-bottom">
 
-      <source 
-        src="https://player.vimeo.com/progressive_redirect/playback/1190910790/rendition/720p/file.mp4"
-        type="video/mp4">
+          <div class="short-stats">
 
-    </video>
+            <span>
+              <i class="fa-solid fa-eye"></i>
+              176k Views
+            </span>
 
-    <div class="short-play" onclick="playVideo('short3', this)">
-      ▶
-    </div>
+            <span>
+              <i class="fa-solid fa-heart"></i>
+              98K Likes
+            </span>
 
-  </div>
+          </div>
 
-</div>
+          <div class="short-duration">
+            0:28
+          </div>
 
-    <div class="short-play" onclick="playVideo('short3', this)">
-      ▶
-    </div>
+        </div>
 
-    <div class="short-bottom">
-
-      <div class="short-stats">
-
-        <span>
-          <i class="fa-solid fa-eye"></i>
-          1.6M Views
-        </span>
-
-        <span>
-          <i class="fa-solid fa-heart"></i>
-          98K Likes
-        </span>
-
-      </div>
-
-      <div class="short-duration">
-        0:28
       </div>
 
     </div>
 
   </div>
-
-</div>
 
 </section>
+
 
 <!-- SHORT FORM SHOWCASE SECTION END -->
  
