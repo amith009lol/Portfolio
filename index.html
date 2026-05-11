@@ -4182,6 +4182,22 @@ html{
   0 10px 30px rgba(139,92,246,0.3);
 
 }
+    .vimeo-wrap{
+  position:relative;
+  width:100%;
+  height:520px;
+  overflow:hidden;
+  border-radius:28px;
+}
+
+.vimeo-wrap iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:none;
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -4631,12 +4647,14 @@ window.addEventListener('mousemove', (e)=>{
 
   <div class="short-video-wrap">
 
-<iframe 
-src="https://player.vimeo.com/video/1190912604?badge=0&autopause=0&player_id=0&app_id=58479"
-frameborder="0"
-allow="autoplay; fullscreen; picture-in-picture"
-allowfullscreen>
-</iframe>
+<div class="short-video-wrap vimeo-wrap">
+
+  <iframe 
+    src="https://player.vimeo.com/video/1190912604?badge=0&autopause=0&player_id=0&app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
+  </iframe>
 
 </div>
 
@@ -4673,10 +4691,10 @@ allowfullscreen>
 
   <div class="short-video-wrap">
 
-   <div class="short-video-wrap">
+  <div class="short-video-wrap vimeo-wrap">
 
   <iframe 
-    src="https://player.vimeo.com/video/1190912604?badge=0&autopause=0&player_id=0&app_id=58479"
+    src="https://player.vimeo.com/video/1190910790?badge=0&autopause=0&player_id=0&app_id=58479"
     frameborder="0"
     allow="autoplay; fullscreen; picture-in-picture"
     allowfullscreen>
@@ -4713,9 +4731,7 @@ allowfullscreen>
 
 <div class="short-card">
 
-  <div class="short-video-wrap">
-
-    <div class="short-video-wrap">
+ <div class="short-video-wrap vimeo-wrap">
 
   <iframe 
     src="https://player.vimeo.com/video/1190910790?badge=0&autopause=0&player_id=0&app_id=58479"
