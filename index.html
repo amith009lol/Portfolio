@@ -1697,7 +1697,16 @@ body::before{
 
   border:
   1px solid rgba(255,255,255,0.25);
-
+  
+.short-video-wrap iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  border-radius:28px;
+  display:block;
+  pointer-events:auto;
+}
+  
 }
 .short-play{
 
@@ -4444,27 +4453,6 @@ html{
 </section>
 <script>
 
-function playVideo(videoId, button){
-
-  const video = document.getElementById(videoId);
-
-  if(video.paused){
-
-    video.play();
-
-    button.style.opacity = "0";
-
-  }
-
-  else{
-
-    video.pause();
-
-    button.style.opacity = "1";
-
-  }
-
-}
 
 document.querySelectorAll("video").forEach(video=>{
 
